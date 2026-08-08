@@ -1,0 +1,19 @@
+{
+  "name": "careerscope-root",
+  "version": "1.0.0",
+  "description": "Production-ready MERN Stack Career Scope application",
+  "main": "server/server.js",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d client/dist"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "gh-pages": "^6.3.0",
+    "prettier": "^3.9.4"
+  }
+}
