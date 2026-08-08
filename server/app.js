@@ -14,6 +14,7 @@ dotenv.config();
 
 const app = express();
 
+
 // Global Middlewares
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
